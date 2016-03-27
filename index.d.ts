@@ -107,8 +107,8 @@ export class IScroll {
     refresh(): void;
     destroy(): void;
 
+    utils: IScrollUtils;
+    
     // Events
     on: (type: string, fn: () => void) => void;
-
-    utils: IScrollUtils;
 }
