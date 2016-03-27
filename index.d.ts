@@ -1,4 +1,4 @@
-interface IScrollIndicatorOptions {
+export interface IScrollIndicatorOptions {
     el?: HTMLElement | string;
     fade?: boolean;
     ignoreBoundaries?: boolean;
@@ -11,7 +11,7 @@ interface IScrollIndicatorOptions {
     speedRatioY?: number;
 }
 
-interface IScrollKeyBindings {
+export interface IScrollKeyBindings {
     pageUp?: number | string,
     pageDown: number | string;
     end: number | string;
@@ -22,7 +22,7 @@ interface IScrollKeyBindings {
     down: number | string;
 }
 
-interface IScrollOptions {
+export interface IScrollOptions {
 
     indicators?: IScrollIndicatorOptions;
 
@@ -74,11 +74,11 @@ interface IScrollOptions {
     startY?: number;
 }
 
-declare interface IScrollEaseOption {
+export interface IScrollEaseOption {
     style: 'string';
     fn: Function;
 }
-declare interface IScrollEaseOptions {
+export interface IScrollEaseOptions {
     quadratic: IScrollEaseOption;
     circular: IScrollEaseOption;
     back: IScrollEaseOption;
@@ -86,11 +86,11 @@ declare interface IScrollEaseOptions {
     elastic: IScrollEaseOption;
 }
 
-declare interface IScrollUtils {
+export interface IScrollUtils {
     ease: IScrollEaseOptions;
 }
 
-declare class IScroll {
+export class IScroll {
 
     constructor(element: string, options?: IScrollOptions);
     constructor(element: HTMLElement, options?: IScrollOptions);
